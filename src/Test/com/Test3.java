@@ -16,6 +16,8 @@ public class Test3 {
             Complex c2 = new Complex(data[2], data[3]);
             Complex c3 = new Complex();
             c3 = c1.add(c2);
+            c1.toString();
+            c3.toString();
             System.out.println("("+c1.toString() + ") + (" + c2.toString()+ ") = " +c3.toString());
             c3=c1.subtract(c2);
             System.out.println("("+c1.toString() + ") - (" + c2.toString()+ ") = " +c3.toString());
@@ -29,7 +31,7 @@ public class Test3 {
         }
     }
 }
-class Complex implements Cloneable{
+class  Complex implements Cloneable{
     double a;
     double b;
     String ans;
@@ -46,7 +48,7 @@ class Complex implements Cloneable{
             return tmpA;
         if (tmpA.equals(("0.0000")))
             return tmpB+"i";
-        return ans;
+        return tmpA+" + "+tmpB+"i";
     }
     public Complex add(Complex rhs){
         Complex ans = new Complex();
